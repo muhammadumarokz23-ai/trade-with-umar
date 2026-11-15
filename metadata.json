@@ -1,0 +1,8 @@
+{
+  "name": "Remix UMAR WITH TRADE",
+  "description": "Ultimate 3D Multi-Market AI Trading Agent powered by Advanced SMC, ICT, and CRT engines across Crypto, Forex, and Stock markets.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

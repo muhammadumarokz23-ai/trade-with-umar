@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html.theme-light {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background-color: transparent;
+}
+
+.uwt-shell {
+  background-color: transparent !important;
+  position: relative;
+  z-index: 0;
+}
+
+/* --- Glassmorphism Card System (Dark Mode) --- */
+.uwt-shell header,
+.uwt-shell aside {
+  background-color: rgba(7, 10, 26, 0.72) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-color: rgba(56, 189, 248, 0.16) !important;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.45);
+}
+
+.uwt-shell main .rounded-2xl,
+.uwt-shell main .rounded-xl {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-width: 1px;
+}
+
+.uwt-shell main .bg-slate-900\/90,
+.uwt-shell main .bg-slate-900\/80,
+.uwt-shell main .bg-slate-900,
+.uwt-shell main .bg-slate-950,
+.uwt-shell main .bg-slate-950\/80,
+.uwt-shell main .bg-\[\#080d1a\],
+.uwt-shell main .bg-\[\#060913\] {
+  background-color: rgba(10, 15, 34, 0.62) !important;
+  border-color: rgba(56, 189, 248, 0.18) !important;
+  box-shadow: 0 8px 32px rgba(2, 6, 23, 0.45), 0 0 22px rgba(0, 210, 255, 0.08);
+}
+
+/* --- Glassmorphism Card System (Light Mode) --- */
+html.theme-light .uwt-shell {
+  color: #0f172a !important;
+}
+
+html.theme-light .uwt-shell header,
+html.theme-light .uwt-shell aside {
+  background-color: rgba(255, 255, 255, 0.72) !important;
+  border-color: rgba(148, 163, 184, 0.45) !important;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.10), 0 0 18px rgba(59, 130, 246, 0.08);
+  color: #0f172a !important;
+}
+
+html.theme-light .uwt-shell main .bg-slate-900\/90,
+html.theme-light .uwt-shell main .bg-slate-900\/80,
+html.theme-light .uwt-shell main .bg-slate-900,
+html.theme-light .uwt-shell main .bg-slate-950,
+html.theme-light .uwt-shell main .bg-slate-950\/80,
+html.theme-light .uwt-shell main .bg-\[\#080d1a\],
+html.theme-light .uwt-shell main .bg-\[\#060913\] {
+  background-color: rgba(255, 255, 255, 0.68) !important;
+  border-color: rgba(148, 163, 184, 0.45) !important;
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.10), 0 0 18px rgba(59, 130, 246, 0.08);
+  color: #0f172a !important;
+}
+
+html.theme-light .uwt-shell main .text-white,
+html.theme-light .uwt-shell main .text-slate-100,
+html.theme-light .uwt-shell main .text-slate-200,
+html.theme-light .uwt-shell header .text-white {
+  color: #0f172a !important;
+}
+
+html.theme-light .uwt-shell main .text-slate-300,
+html.theme-light .uwt-shell main .text-slate-400,
+html.theme-light .uwt-shell aside .text-slate-400 {
+  color: #334155 !important;
+}
+
+/* --- Transparent Three.js WebGL Stage (Picture/3D BG shows through alpha:true canvas, zero backdrop-filter over WebGL) --- */
+.uwt-shell main .uwt-webgl-surface {
+  background-color: rgba(7, 10, 26, 0.22) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-color: rgba(56, 189, 248, 0.28) !important;
+  box-shadow: 0 12px 38px rgba(2, 6, 23, 0.45), 0 0 28px rgba(139, 92, 246, 0.12);
+}
+
+html.theme-light .uwt-shell main .uwt-webgl-surface {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+  border-color: rgba(59, 130, 246, 0.35) !important;
+  color: #f8fafc !important;
+}
+
+.uwt-webgl-surface * {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.uwt-webgl-surface .bg-slate-950,
+.uwt-webgl-surface .bg-slate-950\/95,
+.uwt-webgl-surface .bg-slate-900\/95,
+.uwt-webgl-surface .bg-slate-900\/85,
+.uwt-webgl-surface .bg-slate-900\/80,
+.uwt-webgl-surface .bg-slate-900 {
+  background-color: rgba(9, 13, 30, 0.88) !important;
+  color: #f8fafc !important;
+}
+
+html.theme-light .uwt-webgl-surface .text-white,
+html.theme-light .uwt-webgl-surface .text-slate-200,
+html.theme-light .uwt-webgl-surface .text-slate-300 {
+  color: #f8fafc !important;
+}

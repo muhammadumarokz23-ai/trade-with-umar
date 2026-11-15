@@ -1,0 +1,35 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: umar_user
+      POSTGRES_PASSWORD: umar_password
+      POSTGRES_DB: umar_with_trade
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  python-backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+
+  web-terminal:
+    build: .
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      PYTHON_BACKEND_URL: http://python-backend:8000
+    depends_on:
+      - python-backend
+
+volumes:
+  pgdata:
